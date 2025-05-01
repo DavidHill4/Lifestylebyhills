@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FatherFigure Fitness</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lifestyle by Hills</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Welcome to FatherFigure Fitness</h1>
-    <p>Helping busy dads go from DadBod to FatherFigure</p>
-  </header>
-  <section>
-    <h2>What We Offer</h2>
-    <ul>
-      <li>Workout plans for busy dads</li>
-      <li>Time-efficient nutrition tips</li>
-      <li>Motivational coaching</li>
-    </ul>
-  </section>
-  <footer>
-    <p>&copy; 2025 FatherFigure Fitness</p>
-  </footer>
+    <header>
+        <h1>Welcome to Lifestyle by Hills</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We provide lifestyle tips and services to help you live your best life.</p>
+        </section>
+        <section id="services">
+            <h2>Our Services</h2>
+            <p>Explore our range of lifestyle services tailored to your needs.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email us at: info@lifestylebyhills.com</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Lifestyle by Hills. All rights reserved.</p>
+    </footer>
 </body>
 </html>
 
