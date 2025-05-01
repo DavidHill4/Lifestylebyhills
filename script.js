@@ -8,6 +8,17 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// Add parallax scroll effect
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const parallaxElements = document.querySelectorAll('.hero-slider img');
+    
+    parallaxElements.forEach(element => {
+        const speed = 0.5;
+        element.style.transform = `translateY(${scrolled * speed}px)`;
+    });
+});
+
 // Initialize Hero Swiper
 const heroSwiper = new Swiper('.hero-slider', {
     loop: true,

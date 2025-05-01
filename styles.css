@@ -207,7 +207,7 @@ nav ul li a:hover {
 /* Amenities Section */
 .amenities-section {
     padding: 100px 0;
-    background-color: var(--light-gray);
+    background-color: #DBD2C9;  /* Changed to Shave color */
     text-align: center;
 }
 
@@ -221,12 +221,40 @@ nav ul li a:hover {
     margin-right: auto;
 }
 
+.amenity-item {
+    padding: 20px;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.amenity-item:hover {
+    transform: translateY(-5px);
+}
+
 .amenity-item h3 {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.9rem;
     letter-spacing: 2px;
     color: var(--primary-color);
     font-weight: 400;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+/* Add subtle underline on hover */
+.amenity-item h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.amenity-item:hover h3::after {
+    width: 30px;
 }
 
 /* Booking Section */
@@ -237,17 +265,39 @@ nav ul li a:hover {
 
 .booking-button {
     display: inline-block;
-    padding: 15px 30px;
+    padding: 15px 40px;
     background-color: var(--accent-color);
     color: white;
     text-decoration: none;
-    letter-spacing: 2px;
-    margin-top: 30px;
-    transition: background-color 0.3s ease;
+    letter-spacing: 3px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.booking-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    z-index: -1;
 }
 
 .booking-button:hover {
-    background-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.booking-button:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 /* Footer */
