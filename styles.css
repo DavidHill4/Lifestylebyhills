@@ -99,9 +99,10 @@ nav ul li a {
 
 .overlay-content h2 {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 2.5rem;
+    font-size: 2rem; /* Reduced from 2.5rem to fit on one line */
     margin-bottom: 10px;
     letter-spacing: 2px;
+    color: white; /* Ensuring consistent color */
 }
 
 .overlay-content h3 {
@@ -109,7 +110,7 @@ nav ul li a {
     font-size: 1.2rem;
     letter-spacing: 3px;
     margin-bottom: 20px;
-    color: #373737; /* Dark Gray */
+    color: white; /* Changed from Dark Gray to white */
 }
 
 .overlay-content p {
@@ -117,6 +118,7 @@ nav ul li a {
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 10px;
+    color: white; /* Ensuring consistent color */
 }
 
 /* Gallery Section */
