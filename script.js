@@ -26,6 +26,34 @@ const heroSwiper = new Swiper('.swiper', {
     },
 });
 
+// Initialize Swiper for thumbnail and main gallery
+const thumbSwiper = new Swiper(".thumbSwiper", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+
+const mainSwiper = new Swiper(".mainSwiper", {
+    spaceBetween: 10,
+    effect: "fade",
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+        swiper: thumbSwiper,
+    },
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+});
+
 // Thumbnail gallery functionality
 document.addEventListener('DOMContentLoaded', function() {
     const mainImage = document.querySelector('.property-images > img');
