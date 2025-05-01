@@ -8,6 +8,20 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// Initialize Hero Swiper
+const heroSwiper = new Swiper('.hero-slider', {
+    loop: true,
+    effect: 'fade',
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+
 // Initialize Swiper
 const swiper = new Swiper('.swiper', {
     loop: true,
@@ -24,6 +38,15 @@ const swiper = new Swiper('.swiper', {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+});
+
+// Smooth scroll for navigation
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const section = document.querySelector(this.getAttribute('href'));
+        section.scrollIntoView({ behavior: 'smooth' });
+    });
 });
 
 // Thumbnail gallery functionality

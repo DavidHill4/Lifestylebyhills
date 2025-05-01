@@ -6,50 +6,70 @@
     --light-gray: #D9D9D9;
 }
 
-body {
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
 .main-header {
     position: fixed;
     width: 100%;
-    z-index: 100;
+    z-index: 1000;
     background-color: transparent;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    padding: 20px 0;
 }
 
 .main-header.scrolled {
     background-color: var(--primary-color);
+    padding: 10px 0;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo h1 {
+    font-family: 'Cormorant Garamond', serif;
+    color: white;
+    font-size: 2.5rem;
 }
 
 nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
-    padding: 20px 0;
-    margin: 0;
-}
-
-nav ul li {
-    margin: 0 20px;
+    gap: 40px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
 }
 
+/* Hero Section */
 #hero {
     height: 100vh;
-    width: 100%;
 }
 
-.swiper {
-    width: 100%;
+.hero-slider {
     height: 100%;
 }
 
@@ -59,125 +79,76 @@ nav ul li a {
     object-fit: cover;
 }
 
-/* Hero Section */
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    z-index: 2;
-}
-
-/* Property Showcase */
-.property-showcase {
+/* Gallery Section */
+.gallery-section {
     padding: 100px 0;
 }
 
-.property-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-}
-
-.main-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.thumbnail-grid {
+.gallery-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin-top: 20px;
+    gap: 20px;
 }
 
-.thumbnail-grid img {
+.gallery-grid img {
     width: 100%;
-    height: 150px;
+    height: 300px;
     object-fit: cover;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease;
 }
 
-.thumbnail-grid img.active {
-    border: 2px solid var(--accent-color);
+.gallery-grid img:hover {
     transform: scale(1.05);
 }
 
-.property-details {
-    padding: 20px;
-}
-
-.booking-btn {
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-/* Contact Section */
-.contact-section {
+/* Amenities Section */
+.amenities-section {
+    padding: 100px 0;
     background-color: var(--light-gray);
-    padding: 80px 0;
     text-align: center;
 }
 
-/* Gallery Section */
-.gallery-section {
-    padding: 0;
-    background-color: var(--background-color);
+.amenities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 40px;
 }
 
-.gallery-container {
-    position: relative;
-    max-width: 100%;
-    margin: 0 auto;
+.amenity-item h3 {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: var(--primary-color);
 }
 
-.mainSwiper {
-    width: 100%;
-    height: 100vh;
+/* Booking Section */
+.booking-section {
+    padding: 100px 0;
+    text-align: center;
 }
 
-.mainSwiper .swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.booking-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--accent-color);
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    margin-top: 30px;
+    transition: background-color 0.3s ease;
 }
 
-.thumbSwiper {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%;
-    height: 100px;
-    padding: 0 1rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 8px;
+.booking-button:hover {
+    background-color: var(--primary-color);
 }
 
-.thumbSwiper .swiper-slide {
-    opacity: 0.4;
-    transition: opacity 0.3s ease;
-}
-
-.thumbSwiper .swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 4px;
-}
-
-.thumbSwiper .swiper-slide-thumb-active {
-    opacity: 1;
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.8rem;
 }
 
 /* Responsive Design */
