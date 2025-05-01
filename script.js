@@ -82,3 +82,22 @@ const lightbox = GLightbox({
     loop: true,
     autoplayVideos: true
 });
+
+// Scroll reveal functionality
+const observerOptions = {
+    threshold: 0.2
+};
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, observerOptions);
+
+// Add reveal class to sections
+document.querySelectorAll('.gallery-section, .amenities-section').forEach(el => {
+    el.classList.add('reveal');
+    observer.observe(el);
+});
