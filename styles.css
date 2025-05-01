@@ -61,12 +61,68 @@ nav ul li a {
     background: #D9D9D9;  /* Light Gray for card backgrounds */
     border-radius: 10px;
     overflow: hidden;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 }
 
 .property-card:hover {
     transform: translateY(-5px);
+}
+
+.property-images {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.property-images > img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.thumbnail-grid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.thumbnail-grid img:hover {
+    transform: scale(1.05);
+}
+
+.property-info {
+    padding: 1rem;
+}
+
+.amenities {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.amenities li {
+    color: var(--text-color);
+    padding: 0.5rem;
+    background: var(--background-color);
+    border-radius: 4px;
 }
 
 .property-card img {
