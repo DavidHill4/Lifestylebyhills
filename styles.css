@@ -86,12 +86,12 @@ nav ul li a {
     transform: translate(-50%, -50%);
     z-index: 10;
     text-align: center;
-    width: 80%;
-    max-width: 800px;
+    width: 60%;  /* Changed from 80% to 60% */
+    max-width: 600px;  /* Changed from 800px to 600px */
 }
 
 .overlay-content {
-    background-color: rgba(55, 55, 55, 0.7);
+    background-color: rgba(87, 96, 55, 0.7); /* Your Green color (#576037) with opacity */
     padding: 40px;
     color: white;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -109,7 +109,7 @@ nav ul li a {
     font-size: 1.2rem;
     letter-spacing: 3px;
     margin-bottom: 20px;
-    color: var(--accent-color);
+    color: #373737; /* Dark Gray */
 }
 
 .overlay-content p {
