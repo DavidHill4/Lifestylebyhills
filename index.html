@@ -7,14 +7,17 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Lifestyle by Hills</h1>
+    <header class="main-header">
+        <div class="logo">
+            <h1>Lifestyle by Hills</h1>
+        </div>
         <nav>
             <ul>
-                <li><a href="#properties">Properties</a></li>
-                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#properties">The Don One</a></li>
                 <li><a href="#booking">Book Now</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -22,26 +25,38 @@
     </header>
 
     <main>
-        <section id="hero">
+        <section id="hero" class="full-width-slider">
             <div class="swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="images/1.jpg" alt="Property Image 1"></div>
-                    <div class="swiper-slide"><img src="images/2.jpg" alt="Property Image 2"></div>
-                    <div class="swiper-slide"><img src="images/3.jpg" alt="Property Image 3"></div>
-                    <div class="swiper-slide"><img src="images/4.jpg" alt="Property Image 4"></div>
+                    <div class="swiper-slide"><img src="images/1.jpg" alt="The Don One"></div>
+                    <div class="swiper-slide"><img src="images/2.jpg" alt="The Don One"></div>
+                    <div class="swiper-slide"><img src="images/3.jpg" alt="The Don One"></div>
+                    <div class="swiper-slide"><img src="images/4.jpg" alt="The Don One"></div>
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
+            <div class="hero-text">
+                <h2>Welcome to Luxury Living</h2>
+                <p>Experience exceptional comfort and style</p>
+            </div>
         </section>
 
-        <section id="properties">
-            <h2>Our Properties</h2>
-            <div class="property-grid">
-                <div class="property-card">
+        <section id="about" class="content-section">
+            <div class="container">
+                <h2>About The Don One</h2>
+                <p>Discover the perfect blend of luxury and comfort in our meticulously designed property.</p>
+            </div>
+        </section>
+
+        <section id="properties" class="property-showcase">
+            <div class="container">
+                <div class="property-grid">
                     <div class="property-images">
-                        <img src="images/1.jpg" alt="Property Main View">
+                        <div class="main-image">
+                            <img src="images/1.jpg" alt="The Don One Main View">
+                        </div>
                         <div class="thumbnail-grid">
                             <img src="images/2.jpg" alt="Property Image 2">
                             <img src="images/3.jpg" alt="Property Image 3">
@@ -53,18 +68,17 @@
                             <img src="images/8.jpg" alt="Property Image 8">
                         </div>
                     </div>
-                    <div class="property-info">
+                    <div class="property-details">
                         <h3>The Don One</h3>
-                        <p>
-                            WELCOME TO YOUR LUXURIOUS ESCAPE</p>
-                        <ul class="amenities">
+                        <p class="property-description">WELCOME TO YOUR LUXURIOUS ESCAPE</p>
+                        <ul class="amenities-list">
                             <li>5 Bedrooms</li>
                             <li>5 Bathrooms</li>
                             <li>Private Putting Green</li>
                             <li>Welcoming Backyard with Fire Pit</li>
                             <li>Theatre Room</li>
                         </ul>
-                        <button onclick="openBooking('beachhouse')">Book Now</button>
+                        <button class="booking-btn">Book Your Stay</button>
                     </div>
                 </div>
             </div>
@@ -75,15 +89,21 @@
             <div id="booking-calendar"></div>
         </section>
 
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <p>Email: bookings@lifestylebyhills.com</p>
-            <p>Phone: (555) 123-4567</p>
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <div class="contact-info">
+                    <p>Email: bookings@lifestylebyhills.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Lifestyle by Hills. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2025 Lifestyle by Hills. All rights reserved.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
