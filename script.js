@@ -1,6 +1,6 @@
-// Header transparency effect
+// Header scroll effect
 window.addEventListener('scroll', function() {
-    const header = document.querySelector('header');
+    const header = document.querySelector('.main-header');
     if (window.scrollY > 50) {
         header.classList.add('scrolled');
     } else {
@@ -8,8 +8,8 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Initialize Swiper for hero section
-const heroSwiper = new Swiper('.swiper', {
+// Initialize Swiper
+const swiper = new Swiper('.swiper', {
     loop: true,
     effect: 'fade',
     autoplay: {
@@ -23,34 +23,6 @@ const heroSwiper = new Swiper('.swiper', {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
-    },
-});
-
-// Initialize Swiper for thumbnail and main gallery
-const thumbSwiper = new Swiper(".thumbSwiper", {
-    spaceBetween: 10,
-    slidesPerView: 4,
-    freeMode: true,
-    watchSlidesProgress: true,
-});
-
-const mainSwiper = new Swiper(".mainSwiper", {
-    spaceBetween: 10,
-    effect: "fade",
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    thumbs: {
-        swiper: thumbSwiper,
-    },
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
     },
 });
 
