@@ -75,3 +75,10 @@ function openBooking(propertyId) {
         behavior: 'smooth' 
     });
 }
+
+// Initialize GLightbox
+const lightbox = GLightbox({
+    touchNavigation: true,
+    loop: true,
+    autoplayVideos: true
+});

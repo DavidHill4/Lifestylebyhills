@@ -132,6 +132,11 @@ nav ul li a {
     gap: 20px;
 }
 
+.gallery-grid a {
+    display: block;
+    overflow: hidden;
+}
+
 .gallery-grid img {
     width: 100%;
     height: 300px;
