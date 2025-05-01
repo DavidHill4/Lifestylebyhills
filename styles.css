@@ -79,6 +79,46 @@ nav ul li a {
     object-fit: cover;
 }
 
+.hero-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+}
+
+.overlay-content {
+    background-color: rgba(55, 55, 55, 0.7);
+    padding: 40px;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.overlay-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.overlay-content h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+.overlay-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
 /* Gallery Section */
 .gallery-section {
     padding: 100px 0;
